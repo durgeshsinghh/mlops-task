@@ -1,0 +1,28 @@
+2026-03-28 09:16:50,475 - INFO - Job started
+2026-03-28 09:16:50,483 - INFO - Config loaded: {'seed': 42, 'window': 5, 'version': 'v1'}
+2026-03-28 09:16:50,484 - ERROR - Error occurred: Input CSV file not found
+2026-03-28 09:18:48,404 - INFO - Job started
+2026-03-28 09:18:48,405 - INFO - Config loaded: {'seed': 42, 'window': 5, 'version': 'v1'}
+2026-03-28 09:18:48,433 - ERROR - Error occurred: Missing required column: close
+2026-03-28 09:23:13,543 - INFO - Job started
+2026-03-28 09:23:13,544 - INFO - Config loaded: {'seed': 42, 'window': 5, 'version': 'v1'}
+2026-03-28 09:23:13,569 - ERROR - Error occurred: Missing required column: close. Found columns: ['timestamp,open,high,low,close,volume_btc,volume_usd']
+2026-03-28 09:25:18,259 - INFO - Job started
+2026-03-28 09:25:18,260 - INFO - Config loaded: {'seed': 42, 'window': 5, 'version': 'v1'}
+2026-03-28 09:25:18,286 - ERROR - Error occurred: Missing required column: close. Found columns: ['timestamp,open,high,low,close,volume_btc,volume_usd']
+2026-03-28 09:25:37,375 - INFO - Job started
+2026-03-28 09:25:37,375 - INFO - Config loaded: {'seed': 42, 'window': 5, 'version': 'v1'}
+2026-03-28 09:25:37,391 - ERROR - Error occurred: Missing required column: close. Found columns: ['timestamp,open,high,low,close,volume_btc,volume_usd']
+2026-03-28 09:28:18,500 - INFO - Job started
+2026-03-28 09:28:18,501 - INFO - Config loaded: {'seed': 42, 'window': 5, 'version': 'v1'}
+2026-03-28 09:28:18,524 - ERROR - Error occurred: Missing required column: close. Found columns: ['timestamp,open,high,low,close,volume_btc,volume_usd']
+2026-03-28 09:28:37,500 - INFO - Job started
+2026-03-28 09:28:37,501 - INFO - Config loaded: {'seed': 42, 'window': 5, 'version': 'v1'}
+2026-03-28 09:28:37,515 - ERROR - Error occurred: Missing required column: close. Found columns: ['timestamp,open,high,low,close,volume_btc,volume_usd']
+2026-03-28 09:29:47,001 - INFO - Job started
+2026-03-28 09:29:47,002 - INFO - Config loaded: {'seed': 42, 'window': 5, 'version': 'v1'}
+2026-03-28 09:29:47,027 - INFO - Rows loaded: 10000
+2026-03-28 09:29:47,027 - INFO - Computing rolling mean with window=5
+2026-03-28 09:29:47,035 - INFO - Generating signal
+2026-03-28 09:29:47,036 - INFO - Metrics: {'version': 'v1', 'rows_processed': 9996, 'metric': 'signal_rate', 'value': 0.4991, 'latency_ms': 35, 'seed': 42, 'status': 'success'}
+2026-03-28 09:29:47,036 - INFO - Job completed successfully
