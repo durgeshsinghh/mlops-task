@@ -9,9 +9,9 @@ import sys
 from pathlib import Path
 
 
-# ---------------------------
+
 # Logging Setup
-# ---------------------------
+
 def setup_logging(log_file):
     logging.basicConfig(
         filename=log_file,
@@ -20,9 +20,9 @@ def setup_logging(log_file):
     )
 
 
-# ---------------------------
+
 # Load & Validate Config
-# ---------------------------
+
 def load_config(config_path):
     if not Path(config_path).exists():
         raise ValueError("Config file not found")
@@ -45,9 +45,9 @@ def load_config(config_path):
     return config
 
 
-# ---------------------------
+
 # Load & Validate Data
-# ---------------------------
+
 def load_data(input_path):
     if not Path(input_path).exists():
         raise ValueError("Input CSV file not found")
@@ -67,9 +67,9 @@ def load_data(input_path):
     return df
 
 
-# ---------------------------
+
 # Main Pipeline
-# ---------------------------
+
 def main():
     parser = argparse.ArgumentParser(description="MLOps Batch Signal Pipeline")
 
@@ -94,23 +94,22 @@ def main():
     try:
         logging.info("Job started")
 
-        # ---------------------------
+        
         # Load Config
-        # ---------------------------
+
         config = load_config(args.config)
         logging.info(f"Config loaded: {config}")
 
         np.random.seed(config["seed"])
 
-        # ---------------------------
+
         # Load Data
-        # ---------------------------
+
         df = load_data(args.input)
         logging.info(f"Rows loaded: {len(df)}")
 
-        # ---------------------------
         # Rolling Mean
-        # ---------------------------
+        
         window = int(config["window"])
         logging.info(f"Computing rolling mean with window={window}")
 
@@ -119,16 +118,15 @@ def main():
         # Drop NaN rows
         df = df.dropna()
 
-        # ---------------------------
         # Signal Generation
-        # ---------------------------
+      
         logging.info("Generating signal")
 
         df["signal"] = (df["close"] > df["rolling_mean"]).astype(int)
 
-        # ---------------------------
+        
         # Metrics
-        # ---------------------------
+       
         rows_processed = int(len(df))
         signal_rate = float(df["signal"].mean())
 
@@ -169,8 +167,8 @@ def main():
         sys.exit(1)
 
 
-# ---------------------------
+
 # Entry Point
-# ---------------------------
+
 if __name__ == "__main__":
     main()
